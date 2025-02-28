@@ -1,0 +1,10 @@
+POST http://localhost:8080/api/users/signup
+Content-Type: application/json
+
+{
+  "id": "1",
+  "name": "name",
+  "nickname": "nickname",
+  "password": "1",
+  "role": "GENERAL"
+}
