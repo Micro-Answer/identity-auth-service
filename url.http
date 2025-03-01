@@ -1,5 +1,5 @@
 ### 일반 회원가입
-POST http://localhost:8080/api/users/signup
+POST http://localhost:8080/v1/api/users/signup
 Content-Type: application/json
 
 {
@@ -11,5 +11,6 @@ Content-Type: application/json
 }
 
 ### 아이디 중복 체크
-GET http://localhost:8080/api/users/id/duplicate?id=1
+### 중복 시 true, 중복이 아니면 false
+GET http://localhost:8080/v1/api/users/check-id?id=1
 

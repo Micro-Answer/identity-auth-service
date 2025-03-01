@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/v1/api/users")
 @RequiredArgsConstructor
 public class UserController {
     private final UserService userService;
@@ -21,7 +21,7 @@ public class UserController {
         return ResponseEntity.ok(response);
     }
 
-    @GetMapping("/id/duplicate")
+    @GetMapping("/check-id")
     public ResponseEntity<Map<String, Boolean>> checkDuplicateId(@RequestParam String id) {
         boolean isDuplicate = userService.checkDuplicateId(id);
         return ResponseEntity.ok(Map.of("isDuplicate", isDuplicate));
