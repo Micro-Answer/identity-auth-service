@@ -1,5 +1,5 @@
 ### 일반 회원가입
-POST http://localhost:8080/v1/api/users/signup
+POST http://localhost:8080/v1/api/users/general/signup
 Content-Type: application/json
 
 {

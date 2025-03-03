@@ -1,7 +1,11 @@
 package com.example.userservice.controller;
 
+import com.example.userservice.dto.ExpertSignupRequest;
+import com.example.userservice.dto.ExpertSignupResponse;
 import com.example.userservice.dto.GeneralSignupRequest;
 import com.example.userservice.dto.GeneralSignupResponse;
+//import com.example.userservice.dto.SigninRequest;
+//import com.example.userservice.dto.SigninResponse;
 import com.example.userservice.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -15,9 +19,14 @@ import java.util.Map;
 public class UserController {
     private final UserService userService;
 
-    @PostMapping("/signup")
-    public ResponseEntity<GeneralSignupResponse> signup(@RequestBody GeneralSignupRequest request) {
-        GeneralSignupResponse response = userService.signup(request);
+    @PostMapping("/general/signup")
+    public ResponseEntity<GeneralSignupResponse> GeneralSignup(@RequestBody GeneralSignupRequest request) {
+        GeneralSignupResponse response = userService.GeneralSignup(request);
+        return ResponseEntity.ok(response);
+    }
+    @PostMapping("/expert/signup")
+    public ResponseEntity<ExpertSignupResponse> ExpertSignup(@RequestBody ExpertSignupRequest request) {
+        ExpertSignupResponse response = userService.ExpertSignup(request);
         return ResponseEntity.ok(response);
     }
 
@@ -26,4 +35,11 @@ public class UserController {
         boolean isDuplicate = userService.checkDuplicateId(id);
         return ResponseEntity.ok(Map.of("isDuplicate", isDuplicate));
     }
+
+//    @PostMapping("/signin")
+//    public ResponseEntity<SigninResponse> signin(@RequestBody SigninRequest request){
+//        SigninResponse response = userService.signin(request);
+//        return ResponseEntity.ok(response);
+//    }
+
 }
