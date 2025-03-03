@@ -1,0 +1,366 @@
+GET http://localhost:8080/v1/api/users/check-id?id=1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=6AF6ABC5737FF2589096344A174F0285
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-03-03T153049.200.json
+
+###
+
+POST http://localhost:8080/v1/api/users/expert/signup
+Content-Type: application/json
+Content-Length: 146
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=6AF6ABC5737FF2589096344A174F0285
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "3",
+  "name": "name",
+  "nickname": "nickname",
+  "password": "1",
+  "role": "EXPERT",
+  "organizationName": "콜록 이비인후과"
+}
+
+<> 2025-03-03T153044.200.json
+
+###
+
+POST http://localhost:8080/v1/api/users/expert/signup
+Content-Type: application/json
+Content-Length: 98
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=6AF6ABC5737FF2589096344A174F0285
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "2",
+  "name": "name",
+  "nickname": "nickname",
+  "password": "1",
+  "role": "EXPERT"
+}
+
+<> 2025-03-03T153008.200.json
+
+###
+
+POST http://localhost:8080/v1/api/users/general/signup
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=6AF6ABC5737FF2589096344A174F0285
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "1",
+  "name": "name",
+  "nickname": "nickname",
+  "password": "1",
+  "role": "GENERAL"
+}
+
+<> 2025-03-03T153004.200.json
+
+###
+
+POST http://localhost:8080/v1/api/users/general/signup
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=6AF6ABC5737FF2589096344A174F0285
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "1",
+  "name": "name",
+  "nickname": "nickname",
+  "password": "1",
+  "role": "GENERAL"
+}
+
+###
+
+POST http://localhost:8080/v1/api/users/general/signup
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "1",
+  "name": "name",
+  "nickname": "nickname",
+  "password": "1",
+  "role": "GENERAL"
+}
+
+###
+
+GET http://localhost:8080/v1/api/users/check-id?id=2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-03-01T171904.200.json
+
+###
+
+GET http://localhost:8080/v1/api/users/check-id?id=1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-03-01T171823.200.json
+
+###
+
+POST http://localhost:8080/v1/api/users/signup
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "1",
+  "name": "name",
+  "nickname": "nickname",
+  "password": "1",
+  "role": "GENERAL"
+}
+
+<> 2025-03-01T171819.200.json
+
+###
+
+GET http://localhost:8080/api/users/id/duplicate?id=1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-02-28T213131.200.json
+
+###
+
+POST http://localhost:8080/api/users/signup
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "1",
+  "name": "name",
+  "nickname": "nickname",
+  "password": "1",
+  "role": "GENERAL"
+}
+
+<> 2025-02-28T213128.200.json
+
+###
+
+POST http://localhost:8080/api/users/signup
+Content-Type: application/json
+Content-Length: 195
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "1",
+  "name": "name",
+  "nickname": "nickname",
+  "password": "1",
+  "role": "GENERAL"
+}
+
+GET http://localhost:8080/api/users/id/duplicate
+Content-Type: application/json
+
+{
+"id": "1"
+}
+
+<> 2025-02-28T212308.200.json
+
+###
+
+POST http://localhost:8080/api/users/signup
+Content-Type: application/json
+Content-Length: 96
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "1",
+  "name": "옥",
+  "nickname": "옥이",
+  "password": "1",
+  "role": "GENERAL"
+}
+
+<> 2025-02-28T162429.200.json
+
+###
+
+POST http://localhost:8080/api/users/signup
+Content-Type: application/json
+Content-Length: 96
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "1",
+  "name": "옥",
+  "nickname": "옥이",
+  "password": "1",
+  "role": "GENERAL"
+}
+
+<> 2025-02-28T162141.500.json
+
+###
+
+POST http://localhost:8080/api/users/signup
+Content-Type: application/json
+Content-Length: 96
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "1",
+  "name": "옥",
+  "nickname": "옥이",
+  "password": "1",
+  "role": "GENERAL"
+}
+
+<> 2025-02-28T161840.500.json
+
+###
+
+POST http://localhost:8080/api/users/signup
+Content-Type: application/json
+Content-Length: 96
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "1",
+  "name": "옥",
+  "nickname": "옥이",
+  "password": "1",
+  "role": "GENERAL"
+}
+
+<> 2025-02-27T223346.500.json
+
+###
+
+POST http://localhost:8080/api/users/signup
+Content-Type: application/json
+Content-Length: 96
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "1",
+  "name": "옥",
+  "nickname": "옥이",
+  "password": "1",
+  "role": "GENERAL"
+}
+
+<> 2025-02-27T223341.500.json
+
+###
+
+POST http://localhost:8080/api/users/signup
+Content-Type: application/json
+Content-Length: 96
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "1",
+  "name": "옥",
+  "nickname": "옥이",
+  "password": "1",
+  "role": "GENERAL"
+}
+
+<> 2025-02-27T222859.500.json
+
+###
+
+POST http://localhost:8080/api/users/signup
+Content-Type: application/json
+Content-Length: 96
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "1",
+  "name": "옥",
+  "nickname": "옥이",
+  "password": "1",
+  "role": "GENERAL"
+}
+
+<> 2025-02-27T222721.500.json
+
+###
+
+POST http://localhost:8080/api/users/signup
+Content-Type: application/json
+Content-Length: 75
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "1",
+  "name": "옥",
+  "nickname": "옥이",
+  "password": "1"
+}
+
+<> 2025-02-27T222231.500.json
+
+###
+
+POST http://localhost:8080/api/users/signup
+Content-Type: application/json
+Content-Length: 75
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "1",
+  "name": "옥",
+  "nickname": "옥이",
+  "password": "1"
+}
+
+<> 2025-02-27T221904.500.json
+
+###
+
