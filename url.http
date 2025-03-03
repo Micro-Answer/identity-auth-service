@@ -10,6 +10,20 @@ Content-Type: application/json
   "role": "GENERAL"
 }
 
+### 전문가 회원가입
+POST http://localhost:8080/v1/api/users/expert/signup
+Content-Type: application/json
+
+{
+  "id": "3",
+  "name": "name",
+  "nickname": "nickname",
+  "password": "1",
+  "role": "EXPERT",
+  "organizationName": "콜록 이비인후과"
+}
+
+
 ### 아이디 중복 체크
 ### 중복 시 true, 중복이 아니면 false
 GET http://localhost:8080/v1/api/users/check-id?id=1
