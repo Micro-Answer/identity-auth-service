@@ -7,9 +7,11 @@ import com.example.userservice.dto.GeneralSignupRequest;
 import com.example.userservice.dto.GeneralSignupResponse;
 import com.example.userservice.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.server.ResponseStatusException;
 
 @Service
 @RequiredArgsConstructor
@@ -20,7 +22,7 @@ public class UserService {
     @Transactional
     public GeneralSignupResponse GeneralSignup(GeneralSignupRequest request) {
         if (userRepository.existsById(request.getId())) {
-            throw new RuntimeException("이미 사용 중인 아이디입니다.");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"이미 사용 중인 아이디입니다.");
         }
 
         User user = User.builder()
@@ -42,7 +44,7 @@ public class UserService {
     @Transactional
     public ExpertSignupResponse ExpertSignup(ExpertSignupRequest request) {
         if (userRepository.existsById(request.getId())) {
-            throw new RuntimeException("이미 사용 중인 아이디입니다.");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"이미 사용 중인 아이디입니다.");
         }
 
         User user = User.builder()
