@@ -1,9 +1,11 @@
 user-service/HELP.md
 
+./gradle/
+.gradle/
 problems-report.html
 *.class
 .idea/compiler.xml
-.gradle/
+../.gradle/
 /build/
 !gradlew
 !gradlew.bat
@@ -25,6 +27,10 @@ bin/
 !**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
+.caches/
+.daemon/
+.native/
+.wrapper/
 .idea/
 *.iws
 *.iml
