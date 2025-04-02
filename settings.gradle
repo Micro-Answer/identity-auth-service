@@ -1,0 +1,5 @@
+rootProject.name = "identity_auth_service"
+
+include("user-service")
+include("auth-service")
+include("api-gateway")
