@@ -1,5 +1,6 @@
 package com.example.userservice.controller;
 
+import com.example.userservice.domain.User;
 import com.example.userservice.dto.ExpertSignupRequest;
 import com.example.userservice.dto.ExpertSignupResponse;
 import com.example.userservice.dto.GeneralSignupRequest;
@@ -36,10 +37,11 @@ public class UserController {
         return ResponseEntity.ok(Map.of("isDuplicate", isDuplicate));
     }
 
-//    @PostMapping("/signin")
-//    public ResponseEntity<SigninResponse> signin(@RequestBody SigninRequest request){
-//        SigninResponse response = userService.signin(request);
-//        return ResponseEntity.ok(response);
-//    }
+    @GetMapping("/id/{userId}")
+    public ResponseEntity<User> getUserById(@PathVariable String userId) {
+        User user = userService.findById(userId);
+        return ResponseEntity.ok(user);
+    }
+
 
 }

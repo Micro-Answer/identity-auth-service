@@ -1,4 +1,4 @@
-package com.example.userservice.config;
+package com.example.authservice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,20 +11,17 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
-                .csrf(csrf -> csrf.disable())  // CSRF 비활성화
+                .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
-                                "/v1/api/users/general/signup",
-                                "/v1/api/users/expert/signup",
-                                "/v1/api/users/check-id",
-                                "/v1/api/users/id/**"
+                                "/v1/api/auth/signin"  // 로그인은 인증 없이 허용
                         ).permitAll()
                         .anyRequest().authenticated()
                 )

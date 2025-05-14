@@ -1,13 +1,11 @@
 package com.example.userservice.service;
 
 import com.example.userservice.domain.User;
-import com.example.userservice.dto.ExpertSignupRequest;
-import com.example.userservice.dto.ExpertSignupResponse;
-import com.example.userservice.dto.GeneralSignupRequest;
-import com.example.userservice.dto.GeneralSignupResponse;
+import com.example.userservice.dto.*;
 import com.example.userservice.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -72,9 +70,10 @@ public class UserService {
         return userRepository.existsById(id);
     }
 
-//    @Transactional
-//    public SigninResponse signin(SigninRequest request){
-//
-//    }
+    public User findById(String userId) {
+        return userRepository.findById(userId)
+                .orElseThrow(() -> new UsernameNotFoundException("해당 ID의 사용자를 찾을 수 없습니다."));
+    }
+
 }
 
