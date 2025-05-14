@@ -28,3 +28,11 @@ Content-Type: application/json
 ### 중복 시 true, 중복이 아니면 false
 GET http://localhost:8080/v1/api/users/check-id?id=1
 
+### 로그인
+POST http://localhost:8081/v1/api/auth/signin
+Content-Type: application/json
+
+{
+  "id": "1",
+  "password": "1"
+}
